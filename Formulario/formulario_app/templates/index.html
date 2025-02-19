@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Nome e Idade</title>
+</head>
+<body>
+    <h1>Formulário de Nome e Idade</h1>
+    
+    <form method="post">
+        {% csrf_token %}
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required><br><br>
+
+        <label for="idade">Idade:</label>
+        <input type="text" id="idade" name="idade" required><br><br>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+    {% if nome and idade %}
+        <p>Meu nome é {{ nome }}, Minha idade é {{ idade }}.</p>
+    {% endif %}
+</body>
+</html>
