@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Soma</title>
+</head>
+<body>
+    <h1>Calculadora</h1>
+
+    <form method="post">
+        {% csrf_token %} <!-- Adicionando o token CSRF para segurança -->
+        <label for="soma1">Numero:</label>
+        <input type="text" name="soma1" id="soma1"> <br><br>
+    
+        <label for="soma2">Numero:</label>
+        <input type="text" name="soma2" id="soma2"> <br><br>
+    
+        <button type="submit">Enviar</button>
+    </form>
+    
+    {% if Novo_Valor_Somado %}
+        <p>Sua soma é {{ Novo_Valor_Somado }}!</p>
+    {% endif %}
+
+</body>
+</html>
