@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-e--lg%shcx1502ke8e1_tn#2guv4pgg(r2*-80iceng78g)!cq'
+SECRET_KEY = 'django-insecure-3_zf(tx!$xgtdmq!ry%oaoojp*oupw9ay-dmn9@zw1#5x7i7u#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'usuarios',
+    'usuario',
 ]
 
 MIDDLEWARE = [
@@ -77,9 +77,9 @@ WSGI_APPLICATION = 'meu_crud.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'cadastro',
-        'USER': 'Maiquel',
-        'PASSWORD': '12345',
+        'NAME': 'meu_crud_db',
+        'USER': 'meu_usuario',
+        'PASSWORD': 'minha_senha',
         'HOST': 'localhost',
         'PORT': '3306',
     }
