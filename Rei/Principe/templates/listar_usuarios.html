@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuários Cadastrados</title>
+</head>
+<body>
+
+    <h2>Lista de Usuários</h2>
+
+    <ul>
+    {% for usuario in dados_usuario %}
+        <li>{{dados_usuario.nome}} - {{dados_usuario.senha}}</li>
+    {% endfor%}
+    </ul>
+
+    <br>
+
+    <a href="{% cadastrar_usuario.html %}">Cadastrar novo usuário</a>
+
+</body>
+</html>
