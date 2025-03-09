@@ -1,7 +1,7 @@
 from django.db import models
 
 
-class Usuario(models.Model):
+class Usuario(models.Model):                 # Tabela
     nome = models.CharField(max_length=100)
     senha = models.CharField(max_length=100)
 
