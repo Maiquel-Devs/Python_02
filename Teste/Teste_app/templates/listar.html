@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Usuários</title>
+</head>
+<body>
+    <h2>Lista de Usuários Cadastrados</h2>
+
+    <ul>
+        {% for usuario in usuario %}
+            <li>{{ usuario.nome }} - {{ usuario.senha }}</li>
+        {% endfor %}
+    </ul>
+    
+
+    <a href="{% url 'cadastrar_usuario' %}">Voltar para a Página de Cadastro</a>
+</body>
+</html>
